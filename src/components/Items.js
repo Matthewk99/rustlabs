@@ -1,9 +1,20 @@
 import React from 'react';
 
-const Items = (props) => {
+const Items = (title, image, description) => {
     return (
         <div classname="container">
             <h3>Items</h3>
+            <div classname="img-container">
+                <img src={image} alt='' />
+            </div>
+            <div classname="container-content">
+                <div classname="title-container">
+                    <h2>{title}</h2>
+                </div>
+                <div classname="desc-conatiner">
+                    <p>{description}</p>
+                </div>
+            </div>
         </div>
     )
 }

@@ -41,7 +41,7 @@ class App extends Component {
         </video>
         <Search />
         <nav id="navbar">
-          <Link to="/"><img src= {Logo} id= 'icon' /></Link>{' '}
+          <Link to="/"><img src= {Logo} alt='' id= 'icon' /></Link>{' '}
           <Link to="/items"><h1 id='items'>Items</h1></Link>{' '}
           <Link to="/environment"><h1 id='environment'>Environment</h1></Link>
           <Link to="/about"><h2 id='about'>About</h2></Link>
@@ -50,7 +50,7 @@ class App extends Component {
           <switch>
             <Route path="/" />
             <Route path="/about" render={() => <About /> } />
-            <Route path="/items" render={() => <Items /> } />
+            <Route path="/items" render={() => <Items title={this.state.item.title} image={this.state.item.image} desc={this.state.item.description} /> } />
           </switch>
         </main>
       </div>
