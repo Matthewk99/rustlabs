@@ -27,21 +27,13 @@
 }
 
 #content {
-  color: white;
+  padding: 10%;
+  color: black;
   position: fixed;
-  top: 60%;
-  left: 20%;
+  top: 20%;
   text-align: center;
 }
 
-/* #heady {
-  color: white;
-  width: 400px;
-  height: 175px;
-  position: relative;
-  left: 39%;
-  top: 280px;
-} */
 
 #navbar {
   margin: 0.5%;
@@ -50,25 +42,13 @@
   top: 0px;
 }
 
-.container {
-  width: 300px;
-  overflow: hidden;
-  box-shadow: 0px 0px 15px -5px;
-  transition: 0.5s;
-  animation: ease-in;
+#items {
+  float: right;
+  margin: 0.5%;
+  top: 0px;
+  right: 25%;
 }
 
-.container:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 15px 0px;
-}
+#environment {
 
-.img-container {
-  overflow: hidden;
-  height: 200px;
-}
-
-.container-content {
-  margin: 1rem;
-  margin-top: 0.5rem;
 }
