@@ -10,7 +10,7 @@ const Search = () => {
                 <input
                     type="text"
                     id="search-bar"
-                    placeholder="Search"
+                    placeholder=""
                     name="s" 
                 />
                 <button id="search-bar" type="submit">Search</button>

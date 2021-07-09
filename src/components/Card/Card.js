@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 import './Card.css';
+import ItemList from '../ItemList.js';
 
-const Card = ({ src, alt, title, description, width = '100px', height = '200px' }) => {
-    return (
-        <div classname="Card" style={{ width: width, height: height}}>
-            <div classname="header">
-                <img src={src} alt={alt} style={{ width: width, height: 'calc(0.5 * ' + height + ')'}}/>
+class Card extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            itemsToDisplay: props.Items
+        };
+    }
+
+    render() {
+        return(
+            <div className="Card">
+                <div className="header">
+                    
+                </div>
+                <div className="body">
+                    <h2><ItemList allWeapons={this.props.Items} /></h2>
+                </div>
             </div>
-            <div classname="body" style={{ width: width, height: 'calc(0.5 * ' + height + ')'}}>
-                <h2>{title}</h2>
-                <p>{description}</p>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
+
 export default Card;
+

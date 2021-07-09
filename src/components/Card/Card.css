@@ -7,13 +7,19 @@
 }
 
 .Card .body {
-    background-color: #ddaa77;
+    background-color: #474A41;
+    color: whitesmoke;
+    float: left;
+    clear: both;
+    margin-left: 120px;
 }
 
 .Card .body h2 {
-    background-color: #886644;
+    display: flex;
+    background-color: #474A41;
+    justify-content: center;
+    margin: 20px;
+    
 }
 
-.Card .body p {
-    padding: 10px;
-}
+

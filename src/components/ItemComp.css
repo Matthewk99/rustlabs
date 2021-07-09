@@ -1,0 +1,42 @@
+.itemcomp {
+
+}
+
+.itemcomp .head {
+    text-decoration: underline;
+    color: white;
+    position: absolute;
+    left: 25.5%;
+    margin-top: 10%;
+    transform: scale(1.4);
+}
+
+.itemcomp .bod {
+    background-color: #5A5D52;
+    color: white;
+    position: absolute;
+    left: 24%;
+    top: 60%;
+    padding: 25px;
+    align-items: center;
+    border: 3px solid whitesmoke;
+}
+
+.itemcomp .im {
+    background-color: #787C6E;
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    transform: scale(1.4);
+    border: 3px solid whitesmoke;
+}
+
+.itemcomp .desc {
+    color: whitesmoke;
+    position: absolute;
+    top: 25%;
+    left: 21%;
+    padding: 50px;
+    inline-size: 700px;
+}
+

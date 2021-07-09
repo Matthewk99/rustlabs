@@ -7,16 +7,19 @@
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   transform: scale(2);
-  box-shadow: white;
+  box-shadow: black;
 }
 
-
+#search-bar {
+  border-radius: 0px;
+}
 
 #icon {
   margin: 0.5%;
   height: 75px;
   width: 75px;
   top: 0px;
+  float: left;
 }
 
 #about {
@@ -24,11 +27,17 @@
   bottom:0px;
   right:25%;
   left:48%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+}
+
+#about:hover {
+  text-decoration: underline;
 }
 
 #content {
   padding: 10%;
-  color: black;
+  color: white;
   position: fixed;
   top: 20%;
   text-align: center;
@@ -43,12 +52,31 @@
 }
 
 #items {
-  float: right;
-  margin: 0.5%;
-  top: 0px;
-  right: 25%;
+  color: whitesmoke;
+  float: left;
+  margin: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#items:hover {
+  text-decoration: underline;
 }
 
 #environment {
-
+  color: whitesmoke;
+  float: left;
+  margin: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#environment:hover {
+  text-decoration: underline;
+}
+
+#home-title {
+  color: whitesmoke;
+  position: absolute;
+  top: 30%;
+  left: 39%;
+}
+

@@ -2,37 +2,38 @@ import './App.css';
 import React, { Component } from 'react';
 import Search from './components/Search';
 import About from './components/About';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 import Logo from './logo.jpeg';
 import Video1 from './components/video/Video1.mp4';
 import Card from './components/Card/Card';
-import Smg from './components/Pic/Smg.png';
+import ItemData from './components/ItemData.js';
+import EnviroData from './components/EnviroData.js';
+import ItemComponent from './components/ItemComponent.js';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: "Custom SMG",
+      title: "",
       image: "",
-      description: "The Custom SMG is a quick-firing, low damage submachine gun with moderate recoil."
+      description: ""
     }
   }
 
   render() {
     return (
       <div className="App">
-        <nav id="navbar">
-          <Link to="/"><img src= {Logo} alt='' id= 'icon' /></Link>{' '}
-          <Link to="/items"><h1 id='items'>Items</h1></Link>{' '}
-          <Link to="/environment"><h1 id='environment'>Environment</h1></Link>
-          <Link to="/about"><h2 id='about'>About</h2></Link>
-        </nav>
+        <Link to="/"><img src= {Logo} alt='' id= 'icon' /></Link>{' '}
+        <Link to="/items"><h1 id='items'>Items</h1></Link>{' '}
+        <Link to="/environment"><h1 id='environment'>Environment</h1></Link>
+
         <main>
-          <switch>
+          <Switch>
             <Route exact path="/" render={() =>
               <div>
                 <Search />
+                <Link to="/about"><h2 id='about'>About</h2></Link>
                 <video autoPlay loop muted
                 style = {{
                     position: "absolute",
@@ -47,10 +48,13 @@ class App extends Component {
                 >
                     <source src={Video1} type="video/mp4"/>
                 </video>
+                <h1 id="home-title">RustLabs Console Edition</h1>
               </div> }/>
-            <Route path="/about" render={() => <About /> } />
-            <Route exact path="/items" render={() => <Card src={Smg} alt="a pic" title={this.state.title} description={this.state.description}/> } />
-          </switch>
+            <Route exact path="/about" render={() => <About /> } />
+            <Route exact path="/items" render={() => <Card Items={ItemData}/> } />
+            <Route exact path="/environment" render={() => <Card Items={EnviroData}/> } />
+            <Route exact path='/:title' render={(props) => <ItemComponent title={props.match.params.title} allWeapons={ItemData} allEnviron={EnviroData}/> } />
+          </Switch>
         </main>
       </div>
     );
@@ -58,3 +62,4 @@ class App extends Component {
 }
 
 export default App;
+
